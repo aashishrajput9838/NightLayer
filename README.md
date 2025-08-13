@@ -17,17 +17,26 @@ NightLayer is a sleek Python application that creates a semi-transparent black o
 
 ## 🚀 Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/aashishrajput9838/NightLayer.git
-    cd NightLayer
-    ```
+### Method 1: Direct Download (Easiest) 📥
 
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    This will install `keyboard`, `pywin32`, `pystray`, `Pillow`, and `pyinstaller`.
+1. **Download the ZIP file:**
+   - Go to [NightLayer GitHub](https://github.com/aashishrajput9838/NightLayer)
+   - Click the green "Code" button
+   - Select "Download ZIP"
+   - Extract the ZIP file to your desired folder
+
+2. **Install Python dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Method 2: Git Users (If you know git) 🔧
+
+```bash
+git clone https://github.com/aashishrajput9838/NightLayer.git
+cd NightLayer
+pip install -r requirements.txt
+```
 
 ## 🎮 Usage
 

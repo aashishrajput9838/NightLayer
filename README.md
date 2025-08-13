@@ -94,11 +94,16 @@ The overlay is completely non-intrusive and allows you to continue using all you
 
 ## 🔄 Recent Updates
 
+### Version 2.0.0 (Latest) 🚀
 - ✅ Fixed hotkey compatibility issues
 - ✅ Added status indicator for active state
 - ✅ Improved intuitive controls (Up = brighter, Down = darker)
 - ✅ Enhanced system tray integration
 - ✅ Optimized performance and stability
+
+**Download Latest Version:** [NightLayer_v2.0.exe](https://github.com/aashishrajput9838/NightLayer/releases)
+
+See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 ## 📝 Requirements
 

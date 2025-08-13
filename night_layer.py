@@ -32,11 +32,24 @@ class NightLayer:
         
         # Track window state
         self.is_visible = False
+        
+        # Create status indicator label
+        self.status_label = tk.Label(
+            self.root,
+            text="Night Layer Active",
+            font=("Arial", 8),
+            fg="#333333",  # Very dark gray, barely visible
+            bg="black",
+            padx=5,
+            pady=2
+        )
+        self.status_label.place(x=10, y=10)  # Position in top-left corner
 
         # Set up the hotkeys
         keyboard.add_hotkey('ctrl+space', self.toggle_layer)
-        keyboard.add_hotkey('ctrl+left', self.increase_opacity)
-        keyboard.add_hotkey('ctrl+right', self.decrease_opacity)
+        keyboard.add_hotkey('ctrl+up', self.decrease_opacity)  # Up = less dark = brighter
+        keyboard.add_hotkey('ctrl+down', self.increase_opacity)  # Down = more dark = darker
+        keyboard.add_hotkey('ctrl+shift+c', self.exit_app)
         
         # Bind Escape key to exit - mainly for development/testing
         self.root.bind('<Escape>', lambda e: self.exit_app())

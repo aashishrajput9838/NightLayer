@@ -1,6 +1,17 @@
 # NightLayer 🌙
 
-NightLayer is a sleek Python application that creates a semi-transparent black overlay on your laptop screen for comfortable night-time viewing. It can be toggled on and off, and its opacity adjusted, using keyboard shortcuts or a system tray icon.
+[![Download Latest](https://img.shields.io/badge/Download-Pre--built%20EXE-blue?style=for-the-badge&logo=windows)](https://github.com/aashishrajput9838/NightLayer/releases)
+
+NightLayer is a sleek Python application that creates a semi-transparent black overlay on your windows screen.
+
+* It can be toggled on and off by using [ctrl+space] button. and we can ajdust its opacity by using keyboard shortcuts [ctrl+up/down arrow] .
+
+## 📥 Quick Download
+
+**Get started immediately:**
+- Download the latest executable: [NightLayer_v2.0.exe](https://github.com/aashishrajput9838/NightLayer/releases)
+- No installation required - just run the file!
+- Works on Windows 8.1, 10, and 11
 
 ## ✨ Features
 
@@ -17,7 +28,14 @@ NightLayer is a sleek Python application that creates a semi-transparent black o
 
 ## 🚀 Installation
 
-### Method 1: Direct Download (Easiest) 📥
+### Method 1: Download Pre-built Executable (Recommended) ⚡
+
+1. **Download the latest release:**
+   - Visit [NightLayer Releases](https://github.com/aashishrajput9838/NightLayer/releases)
+   - Download `NightLayer_v2.0.exe` (recommended)
+   - Run the executable directly (no installation required)
+
+### Method 2: Direct Download (Easiest) 📥
 
 1. **Download the ZIP file:**
    - Go to [NightLayer GitHub](https://github.com/aashishrajput9838/NightLayer)
@@ -89,8 +107,6 @@ NightLayer creates a fullscreen, transparent black window that sits on top of al
 
 - **Lower opacity** = More light passes through = Brighter screen
 - **Higher opacity** = Less light passes through = Darker screen
-
-The overlay is completely non-intrusive and allows you to continue using all your applications normally while protecting your eyes from bright screen light.
 
 ## 🔄 Recent Updates
 

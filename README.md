@@ -1,132 +1,117 @@
 # NightLayer 🌙
 
-[![Download Latest](https://img.shields.io/badge/Download-Pre--built%20EXE-blue?style=for-the-badge&logo=windows)](https://github.com/aashishrajput9838/NightLayer/releases)
+<p align="center">
+  <img src="https://img.shields.io/badge/OS-Windows-blue?style=for-the-badge&logo=windows" alt="Windows Support">
+  <img src="https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python" alt="Python">
+  <img src="https://img.shields.io/github/v/release/aashishrajput9838/NightLayer?style=for-the-badge&color=green" alt="Latest Release">
+</p>
 
-NightLayer is a sleek Python application that creates a semi-transparent black overlay on your windows screen.
+---
 
-* It can be toggled on and off by using [ctrl+space] button. and we can ajdust its opacity by using keyboard shortcuts [ctrl+up/down arrow] .
+### **Overview**
+**NightLayer** is a sophisticated Windows utility designed to reduce eye strain by creating a customizable, semi-transparent black overlay across your entire screen. It allows you to dim your display beyond hardware limitations, perfect for late-night sessions or sensitive eyes.
 
-## 📥 Quick Download
+---
 
-**Get started immediately:**
-- Download the latest executable: [NightLayer_v2.0.exe](https://github.com/aashishrajput9838/NightLayer/releases)
-- No installation required - just run the file!
-- Works on Windows 8.1, 10, and 11
+## 📥 **Quick Start**
 
-## ✨ Features
+**No installation required!**
+1. **[Download NightLayer_v2.0.exe](https://github.com/aashishrajput9838/NightLayer/releases)**
+2. Run the file.
+3. Enjoy a more comfortable viewing experience.
 
-*   **Toggle Overlay:** Turn the black overlay on/off using `Ctrl + Space`.
-*   **Adjust Opacity:** 
-    *   Make screen brighter using `Ctrl + Up Arrow` (decreases overlay opacity).
-    *   Make screen darker using `Ctrl + Down Arrow` (increases overlay opacity).
-*   **Status Indicator:** Shows "Night Layer Active" in the top-left corner when the overlay is enabled.
-*   **System Tray Integration:** A minimal system tray icon allows you to:
-    *   Dynamically "Turn On" or "Turn Off" the layer.
-    *   "Close" the application permanently.
-*   **Minimal Interface:** No visible main window, runs discreetly in the background.
-*   **Executable:** Can be built into a standalone `.exe` file for Windows.
+*Works seamlessly on Windows 8.1, 10, and 11.*
 
-## 🚀 Installation
+---
 
-### Method 1: Download Pre-built Executable (Recommended) ⚡
+## ✨ **Key Features**
 
-1. **Download the latest release:**
-   - Visit [NightLayer Releases](https://github.com/aashishrajput9838/NightLayer/releases)
-   - Download `NightLayer_v2.0.exe` (recommended)
-   - Run the executable directly (no installation required)
+- 🌗 **Instant Toggle**: Quickly enable or disable the overlay with a global shortcut.
+- 🎚️ **Dynamic Opacity**: Fine-tune your screen's darkness using intuitive keyboard controls.
+- 🛰️ **Subtle Indicator**: A minimal "Night Layer Active" status in the corner keeps you informed.
+- 📦 **Tray Management**: Control everything from a sleek system tray icon.
+- 🚀 **Zero Footprint**: Runs discreetly in the background with minimal resource usage.
+- 🛠️ **Standalone**: Portable executable with no dependencies needed.
 
-### Method 2: Direct Download (Easiest) 📥
+---
 
-1. **Download the ZIP file:**
-   - Go to [NightLayer GitHub](https://github.com/aashishrajput9838/NightLayer)
-   - Click the green "Code" button
-   - Select "Download ZIP"
-   - Extract the ZIP file to your desired folder
+## 🎮 **Controls & Usage**
 
-2. **Install Python dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+| Action | Shortcut |
+| :--- | :--- |
+| **Toggle Overlay** | `Ctrl + Space` |
+| **Increase Brightness** | `Ctrl + Up Arrow` |
+| **Increase Darkness** | `Ctrl + Down Arrow` |
+| **Exit Application** | `Ctrl + Shift + C` |
 
-### Method 2: Git Users (If you know git) 🔧
+> [!TIP]
+> **Administrator Privileges**: To ensure global hotkeys work correctly across all applications, please run NightLayer as an Administrator.
 
+---
+
+## 🔧 **Installation for Developers**
+
+If you prefer to run from source or contribute:
+
+### **1. Clone & Setup**
 ```bash
 git clone https://github.com/aashishrajput9838/NightLayer.git
 cd NightLayer
+```
+
+### **2. Install Dependencies**
+```bash
 pip install -r requirements.txt
 ```
 
-## 🎮 Usage
-
-### Running from Python Script
-
-To run the application directly from the Python script:
-
+### **3. Run**
 ```bash
 python night_layer.py
 ```
 
-**Note:** The application requires **administrator privileges** to register global hotkeys.
+---
 
-### Using the Executable
+## 🏗 **Building Your Own EXE**
 
-If you have built the `.exe` file (see "Building Executable" below), you can simply run `night_layer.exe` from the `dist` folder.
+Want to package it yourself? We use `PyInstaller`:
 
-### 🎯 Controls
+```bash
+pip install pyinstaller
+pyinstaller --onefile --noconsole night_layer.py
+```
+Your standalone executable will be generated in the `dist/` directory.
 
-*   **Toggle Overlay:** Press `Ctrl + Space`
-*   **Make Brighter:** Press `Ctrl + Up Arrow` (decreases overlay opacity)
-*   **Make Darker:** Press `Ctrl + Down Arrow` (increases overlay opacity)
-*   **Exit Application:** Press `Ctrl + Shift + C`
-*   **System Tray Icon:** Right-click the semi-transparent grey square icon in your system tray to access "Turn On", "Turn Off", and "Close" options.
+---
 
-### 📍 Status Indicator
+## 🎨 **Technical Concept**
 
-When the night layer is active, you'll see a subtle "Night Layer Active" text in the top-left corner of your screen. This indicator is barely visible and won't interfere with your work, but confirms that the overlay is enabled.
+NightLayer operates by creating a fullscreen, undecorated Tkinter window set to `-topmost`. It utilizes the Windows `alpha` attribute to adjust transparency:
+- **Low Alpha**: High transparency, brighter screen.
+- **High Alpha**: Low transparency, darker screen.
 
-## 🔧 Building Executable
+---
 
-To create a standalone executable (`.exe`) file for Windows (8.1, 10, 11) using `PyInstaller`:
+## 🔄 **Recent Updates**
 
-1.  **Ensure PyInstaller is installed:**
-    ```bash
-    pip install pyinstaller
-    ```
-    (It should already be installed if you followed the main installation steps).
+### **Version 2.0.0** 🚀
+- ✨ Added subtle active-state status indicator.
+- ⌨️ Refined hotkey responsiveness.
+- 🛠 Improved system tray menu with dynamic toggles.
+- 📈 Performance optimizations for low CPU usage.
 
-2.  **Generate the executable:**
-    ```bash
-    pyinstaller --onefile --noconsole night_layer.py
-    ```
+Check the [CHANGELOG.md](CHANGELOG.md) for a full history of changes.
 
-The executable (`night_layer.exe`) will be located in the newly created `dist` folder.
+---
 
-## 🎨 How It Works
+## 🤝 **Contributing**
 
-NightLayer creates a fullscreen, transparent black window that sits on top of all other applications. By adjusting the opacity of this overlay, you can control how much light reaches your eyes:
+Contributions are welcome! If you have ideas for features or find bugs, please:
+1. Fork the repository.
+2. Create a feature branch.
+3. Submit a Pull Request.
 
-- **Lower opacity** = More light passes through = Brighter screen
-- **Higher opacity** = Less light passes through = Darker screen
+---
 
-## 🔄 Recent Updates
-
-### Version 2.0.0 (Latest) 🚀
-- ✅ Fixed hotkey compatibility issues
-- ✅ Added status indicator for active state
-- ✅ Improved intuitive controls (Up = brighter, Down = darker)
-- ✅ Enhanced system tray integration
-- ✅ Optimized performance and stability
-
-**Download Latest Version:** [NightLayer_v2.0.exe](https://github.com/aashishrajput9838/NightLayer/releases)
-
-See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
-
-## 📝 Requirements
-
-- Windows 8.1, 10, or 11
-- Python 3.7+
-- Administrator privileges (for global hotkeys)
-
-## 🤝 Contributing
-
-Feel free to submit issues and enhancement requests! 
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/aashishrajput9838">Aashish Rajput</a>
+</p>
